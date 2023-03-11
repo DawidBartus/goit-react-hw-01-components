@@ -1,5 +1,5 @@
 import React from 'react';
-import style from 'components/style/FriendList.css';
+import 'components/style/FriendList.css';
 
 const isOnline = status => {
   let color;

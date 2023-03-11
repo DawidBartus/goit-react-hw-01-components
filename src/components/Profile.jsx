@@ -1,5 +1,5 @@
 import React from 'react';
-import style from 'components/style/Profile.css';
+import 'components/style/Profile.css';
 
 const statslist = stats => {
   const { followers, views, likes } = stats;
