@@ -1,5 +1,6 @@
 import React from 'react';
-import 'components/style/Statistics.css';
+import PropTypes from 'prop-types';
+import 'components/Statistics/Statistics.css';
 
 const Statistics = ({ title, stats }) => {
   return (
@@ -15,6 +16,17 @@ const Statistics = ({ title, stats }) => {
       </ul>
     </section>
   );
+};
+
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      label: PropTypes.string,
+      percentage: PropTypes.number,
+    })
+  ),
 };
 
 export default Statistics;

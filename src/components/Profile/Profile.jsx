@@ -1,5 +1,6 @@
 import React from 'react';
-import 'components/style/Profile.css';
+import PropTypes from 'prop-types';
+import 'components/Profile/Profile.css';
 
 const statslist = stats => {
   const { followers, views, likes } = stats;
@@ -43,6 +44,20 @@ const Profile = ({ data }) => {
       {statslist(stats)}
     </div>
   );
+};
+
+Profile.propTypes = {
+  data: PropTypes.shape({
+    username: PropTypes.string,
+    tag: PropTypes.string,
+    location: PropTypes.string,
+    avatar: PropTypes.string,
+    stats: PropTypes.shape({
+      followers: PropTypes.number,
+      views: PropTypes.number,
+      likes: PropTypes.number,
+    }),
+  }),
 };
 
 export default Profile;
