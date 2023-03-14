@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import 'components/FriendList/FriendList.css';
+import style from 'components/FriendList/FriendList.module.css';
 
 const isOnline = status => {
   let color;
@@ -10,7 +10,7 @@ const isOnline = status => {
 
   return (
     <span
-      className="status"
+      className={style['status']}
       style={{
         ...color,
         display: 'flex',
@@ -25,12 +25,12 @@ const isOnline = status => {
 
 const FriendList = ({ friends }) => {
   return (
-    <ul className="friend-list">
+    <ul className={style['friend-list']}>
       {friends.map(friend => (
-        <li className="item" key={friend.id}>
+        <li className={style['item']} key={friend.id}>
           {isOnline(friend.isOnline)}
-          <img src={friend.avatar} alt="" className="avatar" />
-          <p className="name">{friend.name}</p>
+          <img src={friend.avatar} alt="" className={style['avatar']} />
+          <p className={style['name']}>{friend.name}</p>
         </li>
       ))}
     </ul>

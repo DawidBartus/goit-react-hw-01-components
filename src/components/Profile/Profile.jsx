@@ -1,22 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import 'components/Profile/Profile.css';
+import style from 'components/Profile/Profile.module.css';
 
 const statslist = stats => {
   const { followers, views, likes } = stats;
   return (
-    <ul className="stats">
+    <ul className={style['stats']}>
       <li>
-        <span className="label">Followers</span>
-        <span className="quantity">{followers}</span>
+        <span className={style['label']}>Followers</span>
+        <span className={style['quantity']}>{followers}</span>
       </li>
       <li>
-        <span className="label">Views</span>
-        <span className="quantity">{views}</span>
+        <span className={style['label']}>Views</span>
+        <span className={style['quantity']}>{views}</span>
       </li>
       <li>
-        <span className="label">Likes</span>
-        <span className="quantity">{likes}</span>
+        <span className={style['label']}>Likes</span>
+        <span className={style['quantity']}>{likes}</span>
       </li>
     </ul>
   );
@@ -26,8 +26,8 @@ const Profile = ({ data }) => {
   const { username, tag, location, avatar, stats } = data;
 
   return (
-    <div className="profile">
-      <div className="description">
+    <div className={style['profile']}>
+      <div className={style['description']}>
         <img
           src={avatar}
           alt="User avatar"
@@ -37,9 +37,9 @@ const Profile = ({ data }) => {
             borderRadius: '50%',
           }}
         />
-        <p className="name">{username}</p>
-        <p className="tag">{'@' + tag}</p>
-        <p className="location">{location}</p>
+        <p className={style['name']}>{username}</p>
+        <p className={style['tag']}>{'@' + tag}</p>
+        <p className={style['location']}>{location}</p>
       </div>
       {statslist(stats)}
     </div>
