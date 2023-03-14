@@ -11,9 +11,9 @@ import transactionData from 'components/json/transactions';
 const App = () => {
   return (
     <>
-      <Profile data={userData} />,
-      <Statistics title="Upload stats" stats={data} />,
-      <FriendList friends={friendData} />,
+      <Profile data={userData} />
+      <Statistics title="Upload stats" stats={data} />
+      <FriendList friends={friendData} />
       <TransactionHistory items={transactionData} />
     </>
   );
