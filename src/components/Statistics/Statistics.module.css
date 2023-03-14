@@ -16,6 +16,13 @@
   margin-top: 10px;
   display: flex;
 }
+.stat-list:hover > .item:hover {
+  background-color: #aa3955;
+  color: rgb(255, 218, 218);
+  font-size: 18px;
+  padding: 10px 5px;
+  transition: 600ms;
+}
 
 .stat-list > .item {
   color: aliceblue;
@@ -24,6 +31,7 @@
   flex-direction: column;
   align-items: center;
   width: 50px;
+  transition: 600ms;
 }
 .stat-list > .item:first-child {
   background-color: #53c2f6;

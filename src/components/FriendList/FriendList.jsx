@@ -10,7 +10,7 @@ const isOnline = status => {
 
   return (
     <span
-      className={style['status']}
+      className={style.status}
       style={{
         ...color,
         display: 'flex',
@@ -27,10 +27,10 @@ const FriendList = ({ friends }) => {
   return (
     <ul className={style['friend-list']}>
       {friends.map(friend => (
-        <li className={style['item']} key={friend.id}>
+        <li className={style.item} key={friend.id}>
           {isOnline(friend.isOnline)}
-          <img src={friend.avatar} alt="" className={style['avatar']} />
-          <p className={style['name']}>{friend.name}</p>
+          <img src={friend.avatar} alt="" className={style.avatar} />
+          <p className={style.name}>{friend.name}</p>
         </li>
       ))}
     </ul>
